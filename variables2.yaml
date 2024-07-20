@@ -6,5 +6,5 @@
       Course: DevOps
       Trainer: Nivas
       Duration: 110HRS
-    ansible.builtin.debug:
+     ansible.builtin.debug:
       msg: " Hi I am learning, {{Course}} and Trainer is {{Trainer}} and Duration is {{Duration}}"
