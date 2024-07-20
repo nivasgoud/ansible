@@ -1,0 +1,19 @@
+- name: variables at prompt level
+  hosts: localhost
+  vars_prompt:
+    - name: COURSENAME
+      prompt: "Enter the course name:"
+      private: false
+    - name: TRAINERNAME
+      prompt: "Enter the trainer name:"
+      private: false
+    - name: DURATION
+      prompt: "Enter the duration in hours"
+      private: false
+    - name: FEE
+      prompt: "Enter the course fee"
+      private: true
+  tasks:
+    - name: checking variables at prompt level
+      ansible.builtin.debug:
+        msg: " Hi I am learning {{COURSENAME}}, from Trainer {{TRAINERNAME}} and the duration is {{DURATION}} and the Fee is {{FEE}}"
