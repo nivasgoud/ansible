@@ -1,0 +1,10 @@
+- name: playbook to start nginx
+  hosts: web
+  become: yes
+  tasks:
+    - name: starting Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: yes
+        
