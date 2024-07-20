@@ -1,0 +1,12 @@
+-name: Install Nginx and git
+ hosts: web
+ tasks:
+  -name: Installing Nginx
+    ansible.builtin.package:
+      name: nginx
+      state: present
+
+  -name: Installing GIt
+    ansible.builtin.package:
+      name: git
+      state: present
