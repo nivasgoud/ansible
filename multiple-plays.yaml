@@ -1,0 +1,13 @@
+# List of multiple Plays
+- name: Multiple plays
+  hosts: localhost
+  tasks:
+   - name: Playbook 1
+     ansible.builtin.debug:
+       msg: "Hi I am executing Playbook 1"
+- name: Multiple plays
+  hosts: localhost
+  tasks:
+   - name: Playbook 2
+     ansible.builtin.debug:
+       msg: "Hi I am executing Playbook 2"
