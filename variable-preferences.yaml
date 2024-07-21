@@ -1,0 +1,26 @@
+- name: variable at play level
+  hosts: localhost
+  vars_prompt:
+    - name: Person
+      prompt: "Enter the user name at prompt:"
+      private: false
+    - name: Wishes
+      prompt: "Enter the wish from the prompt"
+      private: false
+  
+  vars_files:
+    - file.yaml
+
+  vars:
+    Person: "Nivas from play"
+    Wishes: "Good Morning from play"
+  
+  tasks:
+    - name: providing user and wish details
+      
+      vars:
+        Person: "Nivas from Task"
+        Wishes: "Good Morning from Task"
+      
+      ansible.builtin.debug:
+        msg: "Hi I am {{Person}} and {{Wishes}}"
