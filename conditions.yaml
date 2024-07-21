@@ -4,6 +4,9 @@
     - name: check user roboshop exists
       ansible.builtin.command: id roboshop
       register: user #output from the above command is stored in a variable user
+      ignore_errors: true # ansible behaviour is if the task fails or errors then the playbook would exit and stop the execution 
+      # where as in shell script it is line by line execution and if it fails moves to the next line until we mention exit code
+      #So in ansible to ignore the error and move to the next task we would mention this parameter as true
     
     - name: user output
       ansible.builtin.debug:
