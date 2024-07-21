@@ -1,0 +1,10 @@
+- name: loops in playbook
+  hosts: localhost
+  tasks:
+   - name: print names from list
+     ansible.builtin.debug:
+       msg: "{{item}}"    #item is the default keyword
+     loop:
+     - Nivas
+     - DevOps
+     - AWS
