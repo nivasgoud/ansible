@@ -8,8 +8,8 @@
       prompt: "Enter the wish from the prompt"
       private: false
   
-  vars_files:
-    - file.yaml
+  #vars_files:
+  #  - file.yaml
 
   vars:
     Person: "Nivas from play"
