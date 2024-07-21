@@ -11,9 +11,9 @@
   #vars_files:
   #  - file.yaml
 
-  vars:
-    Person: "Nivas from play"
-    Wishes: "Good Morning from play"
+  #vars:
+  #  Person: "Nivas from play"
+  #  Wishes: "Good Morning from play"
   
   tasks:
     - name: providing user and wish details
