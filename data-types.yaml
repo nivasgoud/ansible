@@ -1,0 +1,35 @@
+- name: playbook to elaborate data types nothing but types of data processed
+  hosts: localhost
+  vars:
+    name: Nivas   #Key and value pair
+
+    Skills:       #List of data
+     - DevOps
+     - AWS
+     - Shell
+     - Kubernetes
+    
+    Experience:           #Map type key and value
+      DevOps: 7
+      AWS: 4
+      Shell: 5
+      Kuber: 3
+    
+    Trainer: true      #Boolean Value
+  
+  tasks:
+  - name: key and Value pair
+    ansible.builtin.debug:
+      msg: "Hi I am {{name}}"
+  
+  - name: List of data
+    ansible.builtin.debug:
+      msg: "{{Skills}}"
+
+  - name: Map values similar like dictionary
+    ansible.builtin.debug:
+      msg: "{{Experience}}"
+
+  - name: Boolean Value
+    ansible.builtin.debug:
+      msg: "{{Trainer}}"
