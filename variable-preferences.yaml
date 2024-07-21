@@ -18,9 +18,9 @@
   tasks:
     - name: providing user and wish details
       
-      vars:
-        Person: "Nivas from Task"
-        Wishes: "Good Morning from Task"
+      #vars:
+       # Person: "Nivas from Task"
+       # Wishes: "Good Morning from Task"
       
       ansible.builtin.debug:
         msg: "Hi I am {{Person}} and {{Wishes}}"
