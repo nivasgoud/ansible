@@ -1,12 +1,12 @@
 - name: variable at play level
   hosts: localhost
-  vars_prompt:
-    - name: Person
-      prompt: "Enter the user name at prompt:"
-      private: false
-    - name: Wishes
-      prompt: "Enter the wish from the prompt"
-      private: false
+  #vars_prompt:
+  #  - name: Person
+  #    prompt: "Enter the user name at prompt:"
+  #    private: false
+  #  - name: Wishes
+  #    prompt: "Enter the wish from the prompt"
+  #    private: false
   
   #vars_files:
   #  - file.yaml
