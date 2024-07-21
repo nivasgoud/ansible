@@ -11,3 +11,7 @@
     - name: user output
       ansible.builtin.debug:
         msg: "Output message >> {{user}}"
+
+    - name: status return code from user output
+      ansible.builtin.debug:
+        msg: "Status code is >> {{user.rc}}"
